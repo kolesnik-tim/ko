@@ -9,7 +9,12 @@
   font-style: normal;
 }
 
-$icon-menu-icon: "\EA01";
+$icon-fb-copy: "\EA01";
+$icon-group-9: "\EA02";
+$icon-instagram-copy-2: "\EA03";
+$icon-logo-small: "\EA04";
+$icon-menu-icon: "\EA05";
+$icon-vk-copy: "\EA06";
 
 
 %icon {
@@ -28,4 +33,9 @@ $icon-menu-icon: "\EA01";
   display: inline-block;
 }
 
+.icon-fb-copy:before { content: $icon-fb-copy; }
+.icon-group-9:before { content: $icon-group-9; }
+.icon-instagram-copy-2:before { content: $icon-instagram-copy-2; }
+.icon-logo-small:before { content: $icon-logo-small; }
 .icon-menu-icon:before { content: $icon-menu-icon; }
+.icon-vk-copy:before { content: $icon-vk-copy; }

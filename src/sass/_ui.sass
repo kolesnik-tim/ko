@@ -89,6 +89,9 @@ h1, h2
 			padding-top: 0
 			color: $white-two
 			text-shadow: 2px 2px 0 #45402c
+	&--application
+		h2
+			padding-bottom: 55px
 .info
 	&__block
 		p
@@ -156,6 +159,7 @@ form
 		letter-spacing: 0.5px
 		color: $warm-grey
 		background: transparent
+		
 	input[type="submit"]
 		width: auto
 		max-width: 100%
@@ -171,6 +175,14 @@ form
 		letter-spacing: 0.7px
 		color: $warm-grey-two
 		padding-bottom: 40px
+		a
+			font-size: 12px
+			letter-spacing: 0.7px
+			color: $warm-grey-two
+			padding-bottom: 40px
+			margin-left: 4px
+			border-bottom: 1px solid $warm-grey-two
+			padding-bottom: 0
 	input[type="checkbox"] + label::before
 		content: ''
 		font-family: 'FontAwesome'
@@ -182,7 +194,10 @@ form
 		justify-content: center
 		align-items: center
 		position: relative
-		right: 20px
+		right: 10px
 		color: $lichen
 	input[type="checkbox"]:checked + label:before
 		content: '\f00c'
+.form--application
+	label
+		padding-bottom: 0
