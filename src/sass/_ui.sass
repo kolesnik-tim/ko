@@ -54,7 +54,7 @@ h1, h2
 		margin-top: -2px
 
 .heading
-	h2
+	h2, h3
 		font-family: 'Literaturnaya'
 		font-size: 44px
 		font-weight: bold
@@ -77,6 +77,18 @@ h1, h2
 	&--conditions
 		h2
 			padding-top: 0px
+	&--partners
+		h2
+			padding-bottom: 65px
+			padding-top: 0px
+	&--description
+		h2
+			color: $white-two
+			text-shadow: 2px 2px 0 #45402c
+		h3
+			padding-top: 0
+			color: $white-two
+			text-shadow: 2px 2px 0 #45402c
 .info
 	&__block
 		p
@@ -124,6 +136,16 @@ h1, h2
 				letter-spacing: 0.9px
 				color: $light-khaki
 				padding-bottom: 35px
+			&--documentation
+				h2
+					max-width: 570px
+				p
+					padding-bottom: 0
+					line-height: 8px
+					&:nth-child(6)
+						padding-bottom: 45px
+					&:nth-child(2)
+						line-height: 1.25
 form
 	input
 		max-width: 165px
