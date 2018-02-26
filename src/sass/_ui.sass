@@ -4,8 +4,8 @@
 html, body
 	font-family: "Fira Sans"
 	overflow-x: hidden
-	position: relative
 	background: url('../img/texture.png')
+	margin-top: -20px
 .container--two
 	box-sizing: border-box
 	width: 100% !important
@@ -19,6 +19,7 @@ html, body
 	height: 100%
 	max-width: 945px
 	position: relative
+	margin: 0 auto
 .row
 	height: 100%
 a
@@ -43,8 +44,11 @@ h1, h2
 	border-bottom: none
 	display: inline-block
 	text-transform: uppercase
+	text-align: center
 .separation
 	width: 100%
+	position: relative
+	z-index: 10
 	img
 		width: 100%
 		margin-top: -2px
@@ -58,7 +62,7 @@ h1, h2
 		letter-spacing: 1.8px
 		color: $greyish-brown
 		text-shadow: 2px 2px 0 $very-light-brown
-		padding-top: 95px
+		padding-top: 45px
 		text-transform: uppercase
 	p
 		font-family: 'Fira Sans'
@@ -67,7 +71,7 @@ h1, h2
 		letter-spacing: 1px
 		color: $greyish-brown
 		padding-top: 45px
-		padding-bottom: 60px
+		padding-bottom: 40px
 		span
 			font-weight: bold
 	&--conditions
@@ -81,13 +85,29 @@ h1, h2
 			line-height: 1.36
 			letter-spacing: 0.5px
 			color: $greyish-brown
+			&:nth-child(3)
+				font-size: 16px
+				line-height: 1.25
+				color: $warm-grey
+				padding-top: 0
 .advantages
 	&__block
-		&__img
-			background: url('../img/regulation.png')
+		width: 100%
+		height: 100%
+		position: relative
+		img
+			position: absolute
+		&--regulation
+			img
+				left: 0
+				bottom: 0px
+		&--credit
+			img
+				left: -60%
+				bottom: -19px
 		&__text
-			padding-top: 150px
-			padding-bottom: 190px
+			padding-top: 110px
+			padding-bottom: 150px
 			h2
 				font-size: 44px
 				font-weight: bold
@@ -104,3 +124,43 @@ h1, h2
 				letter-spacing: 0.9px
 				color: $light-khaki
 				padding-bottom: 35px
+form
+	input
+		max-width: 165px
+		text-align: center
+		border-bottom: 2px solid $lichen
+		margin-right: 30px
+		font-size: 20px
+		letter-spacing: 0.5px
+		color: $warm-grey
+		background: transparent
+	input[type="submit"]
+		width: auto
+		max-width: 100%
+		background-color: $sand
+	input[type="checkbox"]
+		display: none
+	label
+		display: flex
+		justify-content: center
+		align-items: center
+		padding-top: 40px
+		font-size: 12px
+		letter-spacing: 0.7px
+		color: $warm-grey-two
+		padding-bottom: 40px
+	input[type="checkbox"] + label::before
+		content: ''
+		font-family: 'FontAwesome'
+		width: 16px
+		height: 16px
+		border: 1px solid $lichen
+		border-radius: 3px
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		right: 20px
+		color: $lichen
+	input[type="checkbox"]:checked + label:before
+		content: '\f00c'

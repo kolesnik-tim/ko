@@ -1,14 +1,15 @@
 .intro
   padding-top: 80px
   z-index: 9
+  position: relative
   &:before
     content: ''
     width: 100%
-    height: 100%
+    height: 110%
     position: absolute
     top: 0
     background: url('../img/intro/bg-city.png') no-repeat
-    background-size: contain
+    background-size: 100% 100%
   h1
     font-size: 44px
     font-weight: bold
@@ -27,43 +28,3 @@
     color: $greyish-brown
     &:nth-child(4)
       padding-bottom: 40px
-  form
-    input
-      max-width: 165px
-      text-align: center
-      border-bottom: 2px solid $lichen
-      margin-right: 30px
-      font-size: 20px
-      letter-spacing: 0.5px
-      color: $warm-grey
-      background: transparent
-    input[type="submit"]
-      width: auto
-      max-width: 265px
-      background-color: $sand
-    input[type="checkbox"]
-      display: none
-    label
-      display: flex
-      justify-content: center
-      align-items: center
-      padding-top: 40px
-      font-size: 12px
-      letter-spacing: 0.7px
-      color: $warm-grey-two
-      padding-bottom: 40px
-    input[type="checkbox"] + label::before
-      content: ''
-      font-family: 'FontAwesome'
-      width: 16px
-      height: 16px
-      border: 1px solid $lichen
-      border-radius: 3px
-      display: flex
-      justify-content: center
-      align-items: center
-      position: relative
-      right: 20px
-      color: $lichen
-    input[type="checkbox"]:checked + label:before
-      content: '\f00c'
