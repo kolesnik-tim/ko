@@ -1,0 +1,5 @@
+ProjectTitle: ko
+
+PageList:
+- file: page.html
+  ready: 50
