@@ -13,6 +13,10 @@
       top: 5px !important
       img
         width: 65px !important
+  .menu-open
+    position: relative
+    +r(767)
+      top: -5px
   &__logo
     position: absolute
     top: 100px
@@ -39,6 +43,9 @@
       font-family: 'Literaturnaya'
       font-size: 26px
       color: $greyish-brown-two
+      +r(767)
+        margin-top: -5px
+        margin-left: -15px
       img
         position: relative
         top: -4px
