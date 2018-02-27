@@ -1,5 +1,5 @@
 .intro
-  padding-top: 80px
+  padding-top: 200px
   z-index: 9
   position: relative
   &:before
@@ -10,6 +10,8 @@
     top: 0
     background: url('../img/intro/bg-city.png') no-repeat
     background-size: 100% 100%
+    +r(1200)
+      height: 100%
   h1
     font-size: 44px
     font-weight: bold
@@ -21,10 +23,14 @@
     width: 100%
     margin: 0 auto
     padding: 25px 0
+    +r(767)
+      font-size: 27px
   p
     font-size: 26px
     line-height: 1.54
     letter-spacing: 1px
     color: $greyish-brown
+    +r(767)
+      font-size: 20px
     &:nth-child(4)
       padding-bottom: 40px

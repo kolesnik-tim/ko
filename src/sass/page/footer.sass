@@ -5,6 +5,8 @@
   padding: 0 30px
   overflow: hidden
   height: 85px
+  +r(767)
+    height: auto
   &__block
     position: relative
     top: -20px
@@ -24,9 +26,13 @@
     &__social
       a
         padding-right: 30px
+        &:hover
+          svg
+            fill: $moss
         svg
           font-size: 25px
           fill: $very-light-brown
+          transition: all 0.3s
         &:last-child
           padding-right: 0
     &__done

@@ -13,6 +13,8 @@ html, body
 	max-width: 1070px
 	position: relative
 	margin: 0 auto
+	+r(1024)
+		padding: 0 15px
 .container
 	box-sizing: border-box
 	width: 100% !important
@@ -20,6 +22,8 @@ html, body
 	max-width: 945px
 	position: relative
 	margin: 0 auto
+	+r(1024)
+		padding: 0 15px
 .row
 	height: 100%
 a
@@ -34,7 +38,7 @@ h1, h2
 .btn
 	padding: 15px 45px
 	font-family: 'Literaturnaya'
-	font-size: 16px
+	font-size: 16px !important
 	font-weight: bold
 	letter-spacing: 0.9px
 	color: $greyish-brown
@@ -45,10 +49,15 @@ h1, h2
 	display: inline-block
 	text-transform: uppercase
 	text-align: center
+	transition: all 0.3s
+	&:hover
+		color: $moss
+		background-color: $greyish-brown
 .separation
 	width: 100%
 	position: relative
 	z-index: 10
+	margin-top: -50px
 	img
 		width: 100%
 		margin-top: -2px
@@ -64,6 +73,8 @@ h1, h2
 		text-shadow: 2px 2px 0 $very-light-brown
 		padding-top: 45px
 		text-transform: uppercase
+		+r(767)
+			font-size: 26px
 	p
 		font-family: 'Fira Sans'
 		font-size: 26px
@@ -72,6 +83,8 @@ h1, h2
 		color: $greyish-brown
 		padding-top: 45px
 		padding-bottom: 40px
+		+r(767)
+			font-size: 20px
 		span
 			font-weight: bold
 	&--conditions
@@ -92,6 +105,15 @@ h1, h2
 	&--application
 		h2
 			padding-bottom: 55px
+	&--bid-1
+		p
+			padding-top: 0
+			padding-bottom: 30px
+			max-width: 550px
+			margin: 0 auto
+			font-weight: 300
+			span
+				font-weight: 500
 .info
 	&__block
 		p
@@ -112,17 +134,34 @@ h1, h2
 		position: relative
 		img
 			position: absolute
+			z-index: 8
+			+r(1024)
+				position: relative
+				bottom: -42px
+				width: 60%
+			+r(767)
+				width: 100%
 		&--regulation
 			img
 				left: 0
-				bottom: 0px
+				bottom: 0
 		&--credit
 			img
 				left: -60%
 				bottom: -19px
+				+r(1024)
+					left: 0px
+					bottom: -60px
+				+r(767)
+					width: 100%
+					left: -80px
 		&__text
 			padding-top: 110px
 			padding-bottom: 150px
+			position: relative
+			z-index: 9
+			+r(1024)
+				padding: 0 15px
 			h2
 				font-size: 44px
 				font-weight: bold
@@ -133,6 +172,8 @@ h1, h2
 				max-width: 440px
 				text-transform: uppercase
 				padding-bottom: 40px
+				+r(767)
+					font-size: 24px
 			p
 				font-size: 16px
 				line-height: 1.25
@@ -149,7 +190,8 @@ h1, h2
 						padding-bottom: 45px
 					&:nth-child(2)
 						line-height: 1.25
-form
+.form
+	display: block
 	input
 		max-width: 165px
 		text-align: center
@@ -159,15 +201,32 @@ form
 		letter-spacing: 0.5px
 		color: $warm-grey
 		background: transparent
-		
+		transition: all 0.3s
+		+r(767)
+			width: 100%
+			max-width: 100%
+			margin-bottom: 20px
+		&:focus
+			border-bottom: 2px solid $sand
+	input[type="number"]
+		-moz-appearance: textfield
+	input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+		-webkit-appearance: none
+		margin: 0
 	input[type="submit"]
 		width: auto
 		max-width: 100%
 		background-color: $sand
+		margin-right: 0
+		+r(1024)
+			width: 80%
+			margin-top: 20px
+		+r(767)
+			width: 100%
 	input[type="checkbox"]
 		display: none
 	label
-		display: flex
+		display: inline-flex
 		justify-content: center
 		align-items: center
 		padding-top: 40px
@@ -175,6 +234,12 @@ form
 		letter-spacing: 0.7px
 		color: $warm-grey-two
 		padding-bottom: 40px
+		cursor: pointer
+		position: relative
+		+r(1024)
+			display: inline-block
+			text-align: start
+			padding-left: 20px
 		a
 			font-size: 12px
 			letter-spacing: 0.7px
@@ -183,6 +248,8 @@ form
 			margin-left: 4px
 			border-bottom: 1px solid $warm-grey-two
 			padding-bottom: 0
+		&:hover
+			color: $moss
 	input[type="checkbox"] + label::before
 		content: ''
 		font-family: 'FontAwesome'
@@ -194,10 +261,48 @@ form
 		justify-content: center
 		align-items: center
 		position: relative
+		text-align: center
 		right: 10px
 		color: $lichen
+		+r(1024)
+			position: absolute
+			left: -5px
+
 	input[type="checkbox"]:checked + label:before
 		content: '\f00c'
-.form--application
-	label
-		padding-bottom: 0
+		align-items: center
+	&--application
+		label
+			padding-bottom: 0
+	&--pop-up
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 100%
+		input
+			width: 265px
+			max-width: 100%
+			margin-right: 0
+			margin-bottom: 30px
+		input[type="submit"]
+			width: 265px
+			+r(1024)
+				width: 265px
+		label
+			width: 265px
+			padding-left: 25px
+			text-align: left
+			display: inline-flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			position: relative
+			+r(767)
+				width: 100%
+			a
+				margin-left: 0px
+				+r(767)
+					margin-left: 4px
+		input[type="checkbox"] + label::before
+			left: 0px
+			position: absolute

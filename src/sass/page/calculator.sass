@@ -2,3 +2,71 @@
   background: url('../img/step.png') no-repeat
   background-size: contain
   margin-top: -20px
+  &__block
+    &__range
+      input
+        width: 100%
+      .range
+        &__name
+          font-size: 22px
+          line-height: 0.91
+          letter-spacing: 0.5px
+          color: $greyish-brown
+          font-weight: 300
+          display: inline-block
+          margin-left: -5px
+          +r(767)
+            font-size: 20px
+        &__value
+          font-size: 22px
+          font-weight: 600
+          line-height: 0.91
+          letter-spacing: 1px
+          color: $greyish-brown
+          font-weight: 500
+        &__min
+          font-size: 12px
+          line-height: 1.67
+          letter-spacing: 0.7px
+          text-align: left
+          color: $warm-grey-two
+          padding-bottom: 15px
+          display: inline-block
+        &__max
+          font-size: 12px
+          line-height: 1.67
+          letter-spacing: 0.7px
+          text-align: left
+          color: $warm-grey-two
+    &__pay
+      +r(767)
+        margin-top: -50px
+      p
+        font-size: 22px
+        line-height: 0.91
+        letter-spacing: 0.5px
+        color: $greyish-brown
+      span
+        font-family: LiteraturnayaC
+        font-size: 60px
+        font-weight: bold
+        letter-spacing: 1px
+        text-align: right
+        color: $greyish-brown
+        text-shadow: 2px 2px 0 $very-light-brown
+        padding: 15px 0
+        display: inline-block
+        svg
+          font-size: 70px
+          margin-bottom: -15px
+          margin-left: 20px
+      span:last-child
+        font-family: FiraSans
+        font-size: 12px
+        letter-spacing: 0.7px
+        text-align: left
+        color: $warm-grey-two
+        text-shadow: none
+      input
+        width: 100%
+        padding: 15px 0

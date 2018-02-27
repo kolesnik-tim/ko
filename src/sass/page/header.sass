@@ -1,12 +1,25 @@
 .header
   padding: 20px 30px
-  position: absolute
+  position: fixed
   top: 0
   width: 100%
-  z-index: 10
+  z-index: 89
+  background: rgba(255, 255, 255, 0.5)
+  height: 80px
+  &__logo
+    position: absolute
+    top: 5px
+    left: 50%
+    transform: translateX(-50%)
+    img
+      width: 65px
   &__block
     display: inline-flex
     align-items: center
+    margin-top: -50px
+    a
+      &:hover
+        color: $moss
     i
       display: block
       padding-right: 70px

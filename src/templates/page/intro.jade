@@ -2,13 +2,12 @@ section.intro
   .container
     .row.center-xs
       .col-xs-12
-        img(src="img/intro/logo.png" srcset="img/intro/logo@2x.png 2x, img/intro/logo@3x.png 3x")
         h1 КРЕДИТ ПОД ЗАЛОГ НЕДВИЖИМОСТИ
         p Поможем в сложных ситуациях.
         p Когда все отказывают, а деньги нужны срочно!
-        form
+        form.form
           input(type="text" name="name" placeholder="Имя")
-          input(type="tel" name="phone" placeholder="Телефон")
+          input(type="tel" name="phone" placeholder="Телефон" id="phone-1")
           input(type="number" name="coins" placeholder="Сумма")
           input(type="submit" value="Отправить заявку").btn
           input(type="checkbox" id="checkbox")
