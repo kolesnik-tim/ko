@@ -4,11 +4,18 @@ section.application
       .col-xs-12
         .heading.heading--application
           h2 Оставьте заявку на кредит
-        form.form.form--application
-          input(type="text" name="name" placeholder="Имя")
-          input(type="tel" name="phone" placeholder="Телефон")
-          input(type="number" name="coins" placeholder="Сумма")
+        form.form
+          .form__name
+            input(type="text" name="name" id="user5" required)
+            label(for="user5") Имя
+          .form__tel
+            input(type="tel" name="phone" id="phone5" required)
+            label(for="phone5") Телефон
+          .form__coins
+            input(type="number" name="coins" id="coins5" required)
+            label(for="coins5") Сумма
           input(type="submit" value="Отправить заявку").btn
-          input(type="checkbox" id="checkbox-3")
-          label(for="checkbox-3") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю 
-            a(href="#") условия соглашения.
+          .form__checkbox
+            input(type="checkbox" id="checkbox5")
+            label(for="checkbox5") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
+              a(href="#") условия соглашения.

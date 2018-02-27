@@ -26,13 +26,20 @@
         h2 Заявка на кредит
         p Кредит на <span>3 750 000</span> рублей сроком <span>18</span> лет с процентной ставкой <span>25%</span>.
       form.form.form--pop-up
-        input(type="text" name="name" placeholder="Имя")
-        input(type="tel" name="phone" placeholder="Телефон")
-        input(type="number" placeholder="Телефон")
+        .form__name
+          input(type="text" name="name" id="user1" required)
+          label(for="user1") Имя
+        .form__tel
+          input(type="tel" name="phone" id="phone1" required)
+          label(for="phone1") Телефон
+        .form__coins
+          input(type="number" name="coins" id="coins1" required)
+          label(for="coins1") Сумма
         input(type="submit" value="Отправить").btn
-        input(type="checkbox" id="checkbox-5")
-        label(for="checkbox-5") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
-          a(href="#") условия соглашения.
+        .form__checkbox
+          input(type="checkbox" id="checkbox1")
+          label(for="checkbox1") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
+            a(href="#") условия соглашения.
 .bid-2.pop-up
   .row.middle-xs
     .col-xs-12.center-xs
@@ -41,13 +48,20 @@
       .heading
         h2 Заявка на кредит
       form.form.form--pop-up
-        input(type="text" name="name" placeholder="Имя")
-        input(type="tel" name="phone" placeholder="Телефон")
-        input(type="number" placeholder="Телефон")
+        .form__name
+          input(type="text" name="name" id="user2" required)
+          label(for="user2") Имя
+        .form__tel
+          input(type="tel" name="phone" id="phone2" required)
+          label(for="phone2") Телефон
+        .form__coins
+          input(type="number" name="coins" id="coins2" required)
+          label(for="coins2") Сумма
         input(type="submit" value="Отправить").btn
-        input(type="checkbox" id="checkbox-4")
-        label(for="checkbox-4") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
-          a(href="#") условия соглашения.
+        .form__checkbox
+          input(type="checkbox" id="checkbox2")
+          label(for="checkbox2") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
+            a(href="#") условия соглашения.
 .consultant.pop-up
   .row.middle-xs
     .col-xs-12.center-xs
@@ -55,10 +69,15 @@
         span
       h4 Мы ответим на все вопросы <br>по кредитованию в залог недвижимости.
       form.form.form--pop-up
-        input(type="text" name="name" placeholder="Имя")
-        input(type="tel" name="phone" placeholder="Телефон")
+        .form__name
+          input(type="text" name="name" id="user3" required)
+          label(for="user3") Имя
+        .form__tel
+          input(type="tel" name="phone" id="phone3" required)
+          label(for="phone3") Телефон
         input(type="submit" value="Отправить").btn
-        input(type="checkbox" id="checkbox-4")
-        label(for="checkbox-4") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
-          a(href="#") условия соглашения.
+        .form__checkbox
+          input(type="checkbox" id="checkbox3")
+          label(for="checkbox3") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
+            a(href="#") условия соглашения.
 

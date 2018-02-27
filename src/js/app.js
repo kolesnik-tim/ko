@@ -1,7 +1,8 @@
-// import sayHello from './lib/sayHello.js';
-import mask from 'jquery.maskedinput';
-import jquery from 'jquery';
+import Jquery from 'jquery';
+import './lib/maskedinput';
 import rangeslider from 'rangeslider.js';
+import ScrollMagic from 'scrollmagic';
+
 
 
 
@@ -24,10 +25,23 @@ $('.close').on('click', function() {
   $('.pop-up').removeClass('active');
 });
 
-// //mask
-// jQuery(function($) {
-//   $('#phone-1').mask('(999) 999-9999');
-// });
+//mask
+jQuery(function($) {
+  $('input[type="tel"]').mask('+7(699) 999-9999');
+});
 
 //range
 $('input[type="range"]').rangeslider();
+
+
+
+var controller = new ScrollMagic.Controller();
+
+// create a scene
+new ScrollMagic.Scene({
+  duration: 100,
+  offset: 50
+})
+  .setPin('#my-sticky-element')
+  .setTween(tween)
+  .addTo(controller);

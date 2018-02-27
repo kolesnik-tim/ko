@@ -6,13 +6,20 @@ section.intro
         p Поможем в сложных ситуациях.
         p Когда все отказывают, а деньги нужны срочно!
         form.form
-          input(type="text" name="name" placeholder="Имя")
-          input(type="tel" name="phone" placeholder="Телефон" id="phone-1")
-          input(type="number" name="coins" placeholder="Сумма")
+          .form__name
+            input(type="text" name="name" id="user" required)
+            label(for="user") Имя
+          .form__tel
+            input(type="tel" name="phone" id="phone" required)
+            label(for="phone") Телефон
+          .form__coins
+            input(type="number" name="coins" id="coins" required)
+            label(for="coins") Сумма
           input(type="submit" value="Отправить заявку").btn
-          input(type="checkbox" id="checkbox")
-          label(for="checkbox") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
-            a(href="#") условия соглашения.
+          .form__checkbox
+            input(type="checkbox" id="checkbox")
+            label(for="checkbox") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
+              a(href="#") условия соглашения.
 .separation
   img(src="img/separation.png" srcset="img/separation@2x.png 2x, img/separation@3x.png 3x")
   img(src="img/separation-two.png" srcset="img/separation-two@2x.png 2x, img/separation-two@3x.png 3x")

@@ -108,7 +108,7 @@ h1, h2
 	&--bid-1
 		p
 			padding-top: 0
-			padding-bottom: 30px
+			padding-bottom: 0px
 			max-width: 550px
 			margin: 0 auto
 			font-weight: 300
@@ -192,22 +192,89 @@ h1, h2
 						line-height: 1.25
 .form
 	display: block
-	input
-		max-width: 165px
-		text-align: center
-		border-bottom: 2px solid $lichen
+	&__name, &__tel, &__coins
+		display: inline-block
+		position: relative
 		margin-right: 30px
-		font-size: 20px
-		letter-spacing: 0.5px
-		color: $warm-grey
-		background: transparent
-		transition: all 0.3s
+		width: 180px
 		+r(767)
 			width: 100%
-			max-width: 100%
 			margin-bottom: 20px
-		&:focus
-			border-bottom: 2px solid $sand
+		input
+			width: 100%
+			text-align: center
+			border-bottom: 2px solid $lichen
+			font-size: 20px
+			letter-spacing: 0.5px
+			color: $warm-grey
+			background: transparent
+			transition: all 0.3s
+			padding: 10px 0
+			&:focus
+				border-bottom: 2px solid $sand
+			&:valid + label
+				transform: translate(-50%, 40px)
+				font-size: 15px
+			&:focus + label
+				transform: translate(-50%, 40px)
+				font-size: 15px
+		label
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			top: 10px
+			font-size: 20px
+			color: $warm-grey
+			padding: 0
+			transition: all 0.3s
+	&__checkbox
+		input
+			display: none
+			& + label::before
+				content: ''
+				font-family: 'FontAwesome'
+				width: 16px
+				height: 16px
+				border: 1px solid $lichen
+				border-radius: 3px
+				display: flex
+				justify-content: center
+				align-items: center
+				position: relative
+				text-align: center
+				right: 10px
+				color: $lichen
+				+r(1024)
+					position: absolute
+					left: -5px
+			&:checked + label:before
+				content: '\f00c'
+				align-items: center
+		label
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			padding-top: 40px
+			font-size: 12px
+			letter-spacing: 0.7px
+			color: $warm-grey-two
+			padding-bottom: 40px
+			cursor: pointer
+			position: relative
+			+r(1024)
+				display: inline-block
+				text-align: start
+				padding-left: 20px
+			a
+				font-size: 12px
+				letter-spacing: 0.7px
+				color: $warm-grey-two
+				padding-bottom: 40px
+				margin-left: 4px
+				border-bottom: 1px solid $warm-grey-two
+				padding-bottom: 0
+			&:hover
+				color: $moss
 	input[type="number"]
 		-moz-appearance: textfield
 	input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
@@ -223,54 +290,6 @@ h1, h2
 			margin-top: 20px
 		+r(767)
 			width: 100%
-	input[type="checkbox"]
-		display: none
-	label
-		display: inline-flex
-		justify-content: center
-		align-items: center
-		padding-top: 40px
-		font-size: 12px
-		letter-spacing: 0.7px
-		color: $warm-grey-two
-		padding-bottom: 40px
-		cursor: pointer
-		position: relative
-		+r(1024)
-			display: inline-block
-			text-align: start
-			padding-left: 20px
-		a
-			font-size: 12px
-			letter-spacing: 0.7px
-			color: $warm-grey-two
-			padding-bottom: 40px
-			margin-left: 4px
-			border-bottom: 1px solid $warm-grey-two
-			padding-bottom: 0
-		&:hover
-			color: $moss
-	input[type="checkbox"] + label::before
-		content: ''
-		font-family: 'FontAwesome'
-		width: 16px
-		height: 16px
-		border: 1px solid $lichen
-		border-radius: 3px
-		display: flex
-		justify-content: center
-		align-items: center
-		position: relative
-		text-align: center
-		right: 10px
-		color: $lichen
-		+r(1024)
-			position: absolute
-			left: -5px
-
-	input[type="checkbox"]:checked + label:before
-		content: '\f00c'
-		align-items: center
 	&--application
 		label
 			padding-bottom: 0
@@ -279,30 +298,26 @@ h1, h2
 		flex-direction: column
 		align-items: center
 		max-width: 100%
-		input
+		.form__name, .form__tel, .form__coins
 			width: 265px
-			max-width: 100%
 			margin-right: 0
-			margin-bottom: 30px
-		input[type="submit"]
-			width: 265px
-			+r(1024)
-				width: 265px
-		label
-			width: 265px
-			padding-left: 25px
-			text-align: left
-			display: inline-flex
-			flex-direction: column
-			align-items: flex-start
-			justify-content: flex-start
-			position: relative
+			margin-bottom: 10px
 			+r(767)
 				width: 100%
-			a
-				margin-left: 0px
+		input[type="submit"]
+			width: 265px
+			margin-top: 20px
+			+r(1024)
+				width: 265px
+		.form__checkbox
+			label
+				width: 265px
+				padding-left: 25px
+				display: inline-block
+				text-align: left
+				padding-top: 10px
 				+r(767)
-					margin-left: 4px
-		input[type="checkbox"] + label::before
-			left: 0px
-			position: absolute
+					width: 100%
+			input + label::before
+				position: absolute
+				left: -5px

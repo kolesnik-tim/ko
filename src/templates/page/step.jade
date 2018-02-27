@@ -30,10 +30,17 @@ section.step.info
     .row.center-xs
       .col-xs-12
         form.form
-          input(type="text" name="name" placeholder="Имя")
-          input(type="tel" name="phone" placeholder="Телефон")
-          input(type="number" name="coins" placeholder="Сумма")
+          .form__name
+            input(type="text" name="name" id="user4" required)
+            label(for="user4") Имя
+          .form__tel
+            input(type="tel" name="phone" id="phone4" required)
+            label(for="phone4") Телефон
+          .form__coins
+            input(type="number" name="coins" id="coins4" required)
+            label(for="coins4") Сумма
           input(type="submit" value="Отправить заявку").btn
-          input(type="checkbox" id="checkbox-2")
-          label(for="checkbox-2") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
-            a(href="#") условия соглашения.
+          .form__checkbox
+            input(type="checkbox" id="checkbox4")
+            label(for="checkbox4") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
+              a(href="#") условия соглашения.
