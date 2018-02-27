@@ -35,13 +35,27 @@ $('input[type="range"]').rangeslider();
 
 
 
-var controller = new ScrollMagic.Controller();
 
-// create a scene
-new ScrollMagic.Scene({
-  duration: 100,
-  offset: 50
-})
-  .setPin('#my-sticky-element')
-  .setTween(tween)
-  .addTo(controller);
+$(window).scroll(function() {
+  var scrolled = $(this).scrollTop();
+  if( scrolled >= 10 && ! $('.header').hasClass('sticked') ) {
+    $('.header').addClass('sticked');
+  }    
+  if( scrolled <= 10 && $('.header').hasClass('sticked')) {        
+    $('.header').removeClass('sticked');
+  }
+});
+
+
+
+
+// var controller = new ScrollMagic.Controller();
+
+// // create a scene
+// new ScrollMagic.Scene({
+//   duration: 100,
+//   offset: 50
+// })
+//   .setPin('#my-sticky-element')
+//   .setTween(tween)
+//   .addTo(controller);

@@ -1,18 +1,27 @@
 .header
   padding: 20px 30px
-  position: fixed
+  position: absolute
   top: 0
   width: 100%
   z-index: 89
-  background: rgba(255, 255, 255, 0.5)
   height: 80px
+  transition: all 1.5s
+  &.sticked
+    position: fixed
+    background: rgba(255, 255, 255, 0.5)
+    .header__logo
+      top: 5px !important
+      img
+        width: 65px !important
   &__logo
     position: absolute
-    top: 5px
+    top: 100px
     left: 50%
     transform: translateX(-50%)
+    transition: all 1.5s
     img
-      width: 65px
+      width: 150px
+      transition: all 1.5s
   &__block
     display: inline-flex
     align-items: center
