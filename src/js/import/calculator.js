@@ -1,7 +1,6 @@
 import rangeslider from 'rangeslider.js';
-import numeral from 'numeral';
+import accounting from '../import/format';
 
-//Формат
 
 //калькулятор
 const cssClasses = [
@@ -15,7 +14,7 @@ $('input[type=range]').rangeslider({
   onSlide: function(position, value) {
     let curr = $(this)[0].$element[0];
     value = checkTime(curr, value);
-    $(curr).closest('.calculator__block__range').find('.range__value b').text(numeral(Math.floor(value)).format('0, 0'));
+    $(curr).closest('.calculator__block__range').find('.range__value b').text(accounting.formatNumber(Math.floor(value), 0, ' '));
     computation();
   }
 });
@@ -28,6 +27,10 @@ function checkTime(curr, value) {
       if (value >= 1 && value < 2) {
         term.text('год');
       } else if(value >= 2 && value < 5) {
+        term.text('года');
+      } else if(value >= 21 && value < 22) {
+        term.text('год');
+      } else if(value >= 22 && value < 25) {
         term.text('года');
       } else{
         term.text('лет');
@@ -50,6 +53,5 @@ function computation() {
   let b = Math.pow((1+percent), term) - 1;
   let result = sum * (a/b);
 
-  payment.text(numeral(Math.floor( result )).format('0, 0'));
+  payment.text(accounting.formatNumber(Math.floor(result), 0, ' '));
 }
-

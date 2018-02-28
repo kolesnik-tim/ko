@@ -2,6 +2,7 @@ import './lib/maskedinput';
 import './import/animation';
 import './import/pop-up';
 import './import/calculator';
+import './import/parallax';
 
 //mask
 jQuery(function($) {

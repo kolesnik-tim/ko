@@ -6,10 +6,10 @@ import 'debug.addIndicators';
 //logo
 $(window).scroll(function() {
   var scrolled = $(this).scrollTop();
-  if( scrolled >= 10 && ! $('.header').hasClass('sticked') ) {
+  if( scrolled >= 2 && ! $('.header').hasClass('sticked') ) {
     $('.header').addClass('sticked');
   }    
-  if( scrolled <= 10 && $('.header').hasClass('sticked')) {        
+  if( scrolled <= 2 && $('.header').hasClass('sticked')) {        
     $('.header').removeClass('sticked');
   }
 });

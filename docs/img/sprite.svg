@@ -3,6 +3,19 @@
     
         <path id="a" d="M0 15v15h52.5V0H0v15z"/>
     
+        <filter id="a" width="141.8%" height="141.8%" x="-20.9%" y="-20.9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="17.137"/>
+        </filter>
+        <filter id="b" width="125.7%" height="125.7%" x="-12.9%" y="-12.9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="7.84"/>
+        </filter>
+        <filter id="c" width="127.5%" height="127.5%" x="-13.7%" y="-13.7%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2.838"/>
+        </filter>
+        <filter id="d" width="126.3%" height="126.3%" x="-13.2%" y="-13.2%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3.552"/>
+        </filter>
+    
         <path id="a" d="M0 0h21.93v12.84H0V0z"/>
     </defs><symbol id="icon-fb-copy" viewBox="0 0 22 22">
     
@@ -34,6 +47,14 @@
     </g>
 </symbol><symbol id="icon-menu-icon" viewBox="0 0 30 22">
     <path d="M23 2H1a1 1 0 0 1 0-2h22a1 1 0 1 1 0 2m6 10H1a1 1 0 0 1 0-2h28a1 1 0 1 1 0 2M14 22H1a1 1 0 0 1 0-2h13a1 1 0 0 1 0 2" fill-rule="evenodd"/>
+</symbol><symbol id="icon-regulation2" viewBox="0 0 331 332">
+    
+    <g fill-rule="evenodd" transform="translate(7 -12)">
+        <circle cx="163" cy="123" r="123" fill-opacity=".53" filter="url(#a)" style="mix-blend-mode:overlay"/>
+        <circle cx="194.5" cy="235.5" r="91.5" fill-opacity=".29" filter="url(#b)" style="mix-blend-mode:overlay"/>
+        <circle cx="255" cy="175" r="31" fill-opacity=".18" filter="url(#c)" style="mix-blend-mode:overlay"/>
+        <circle cx="40.5" cy="52.5" r="40.5" fill-opacity=".14" filter="url(#d)" style="mix-blend-mode:overlay"/>
+    </g>
 </symbol><symbol id="icon-rouble" viewBox="0 0 40 71">
     <g fill-rule="evenodd">
         <text font-family="FrizQuadrataC" font-size="60" letter-spacing="3.488">

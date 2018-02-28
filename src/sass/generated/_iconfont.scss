@@ -14,8 +14,9 @@ $icon-group-9: "\EA02";
 $icon-instagram-copy-2: "\EA03";
 $icon-logo-small: "\EA04";
 $icon-menu-icon: "\EA05";
-$icon-rouble: "\EA06";
-$icon-vk-copy: "\EA07";
+$icon-regulation2: "\EA06";
+$icon-rouble: "\EA07";
+$icon-vk-copy: "\EA08";
 
 
 %icon {
@@ -39,5 +40,6 @@ $icon-vk-copy: "\EA07";
 .icon-instagram-copy-2:before { content: $icon-instagram-copy-2; }
 .icon-logo-small:before { content: $icon-logo-small; }
 .icon-menu-icon:before { content: $icon-menu-icon; }
+.icon-regulation2:before { content: $icon-regulation2; }
 .icon-rouble:before { content: $icon-rouble; }
 .icon-vk-copy:before { content: $icon-vk-copy; }
