@@ -4,6 +4,7 @@
   margin-top: -20px
   &__block
     &__range
+      height: 60px
       input
         width: 100%
       .range
@@ -24,6 +25,8 @@
           letter-spacing: 1px
           color: $greyish-brown
           font-weight: 500
+          i
+            padding-left: 5px
         &__min
           font-size: 12px
           line-height: 1.67
@@ -70,3 +73,16 @@
       input
         width: 100%
         padding: 15px 0
+.rangeslider__fill
+  border-radius: 2px
+  background-color: $lichen
+.rangeslider--horizontal
+  height: 4px
+  border-radius: 2px
+  background-color: $light-grey
+  margin: 10px 0
+.rangeslider__handle
+  width: 20px
+  height: 20px
+  background-color: $sand
+  box-shadow: 0 2px 0 0 $moss
