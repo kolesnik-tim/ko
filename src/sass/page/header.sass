@@ -9,10 +9,6 @@
   &.sticked
     position: fixed
     background: rgba(255, 255, 255, 0.5)
-    .header__logo
-      top: 5px !important
-      img
-        width: 65px !important
   .menu-open
     position: relative
     +r(767)
@@ -21,10 +17,11 @@
     position: absolute
     top: 100px
     left: 50%
+    width: 150px
     transform: translateX(-50%)
     transition: all 1.5s
     img
-      width: 150px
+      width: 100%
       transition: all 1.5s
   &__block
     display: inline-flex
