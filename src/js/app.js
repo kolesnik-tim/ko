@@ -1,80 +1,104 @@
-
 import './lib/maskedinput';
 import rangeslider from 'rangeslider.js';
 // import ScrollMagic from 'scrollmagic';
-
-//range
-// $('input[type="range"]').rangeslider({
-//   onSlide: function(position, value) {
-//     $('.coins__res').text(value);
-//   }
-// });
 
 const cssClasses = [
   'rangeslider--is-lowest-value',
   'rangeslider--is-highest-value'
 ];
-  
+
+//калькулятор
 $('input[type=range]').rangeslider({
   polyfill: false,
   onSlide: function(position, value) {
-    $('.coins__res').text(value);
+    let curr = $(this)[0].$element[0];
+    value = checkTime(curr, value);
+    $(curr).closest('.calculator__block__range').find('.range__value b').text(Math.floor(value));
+    computation();
   }
 });
 
+function checkTime(curr, value) {
+  let term = $('.term__res i');
+  if ($(curr).is('.term')) {
+    if (value > 11) {
+      value = value / 12;
+      console.log(value);
+      if (value >= 1 && value < 2) {
+        term.text('год');
+      } else if(value >= 2 && value < 5) {
+        term.text('года');
+      } else{
+        term.text('лет');
+      }
+      
+    } else{
+      term.text('месяцев');
+    }
+  }
+  return value;
+}
 
-
-//калькулятор
-let coins = $('.coins');
-let credit = $('.credit');
-let percent = $('.percent');
-let sum = $('.sum');
-
-coins.change(function() {
-  computation();
-  $('.coins__res').text(coins.val() + 'P');
-});
-credit.change(function() {
-  computation();
-  $('.credit__res').text(credit.val() + 'лет');
-  console.log(+credit.val());
-});
-percent.change(function() {
-  computation();
-  $('.percent__res').text(+percent.val() + '%');
-});
+// coins.change(function() {
+//   computation();
+//   $('.coins__res').text(coins.val());
+// });
+// credit.change(function() {
+//   computation();
+//   $('.credit__res').text(credit.val());
+//   console.log(+credit.val());
+// });
+// percent.change(function() {
+//   computation();
+//   $('.percent__res').text(+percent.val(), '%');
+// });
 
 function computation() {
-  let res = Math.pow(percent.val(), credit.val());
-  let division = (percent.val() * res)/(res - 1);
-  let amount = coins.val() * division;
-  sum.text(res);
+  let sum = parseInt($('.sum').val());
+  let term = parseInt($('.term').val());
+  let percent = parseInt($('.percent').val()) / 12 / 100;
+  let payment = $('.payment');
+
+  let a = percent * Math.pow((1+percent), term);
+  let b = Math.pow((1+percent), term) - 1;
+  let result = sum * (a/b);
+
+  payment.text(Math.floor( result ));
 }
 
 
 //pop-up
+$('[data-pop]').on('click', function() {
+  let href = $(this).attr('href');
+  $(href).addClass('active');
+});
 
-
-//menu
-$('.icon-menu-icon').on('click', function() {
-  $('.menu').addClass('active');
-});
-// pop-up 1
-$('.btn--bid-1').on('click', function() {
-  $('.bid-1').addClass('active');
-});
-//pop-up 2
-$('.btn--bid-2').on('click', function() {
-  $('.bid-2').addClass('active');
-});
-// pop-up 3
-$('.btn--consultant').on('click', function() {
-  $('.consultant').addClass('active');
-});
 //pop-up close
 $('.close').on('click', function() {
   $('.pop-up').removeClass('active');
 });
+
+
+// // menu
+// $('.icon-menu-icon').on('click', function() {
+//   $('.menu').addClass('active');
+// });
+// // pop-up 1
+// $('.btn--bid-1').on('click', function() {
+//   $('.bid-1').addClass('active');
+// });
+// //pop-up 2
+// $('.btn--bid-2').on('click', function() {
+//   $('.bid-2').addClass('active');
+// });
+// // pop-up 3
+// $('.btn--consultant').on('click', function() {
+//   $('.consultant').addClass('active');
+// });
+// //pop-up close
+// $('.close').on('click', function() {
+//   $('.pop-up').removeClass('active');
+// });
 
 
 //mask
