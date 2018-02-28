@@ -9,36 +9,13 @@
   font-style: normal;
 }
 
-$icon-1: "\EA01";
-$icon-2: "\EA02";
-$icon-24hour: "\EA03";
-$icon-3: "\EA04";
-$icon-4: "\EA05";
-$icon-bag: "\EA06";
-$icon-certificate: "\EA07";
-$icon-chat: "\EA08";
-$icon-city: "\EA09";
-$icon-coins: "\EA0A";
-$icon-cycle: "\EA0B";
-$icon-fb-copy: "\EA0C";
-$icon-group-9: "\EA0D";
-$icon-home: "\EA0E";
-$icon-horse: "\EA0F";
-$icon-instagram-copy-2: "\EA10";
-$icon-letter: "\EA11";
-$icon-location: "\EA12";
-$icon-logo-small: "\EA13";
-$icon-logo: "\EA14";
-$icon-menu-icon: "\EA15";
-$icon-peple: "\EA16";
-$icon-rouble: "\EA17";
-$icon-rub: "\EA18";
-$icon-store: "\EA19";
-$icon-talk: "\EA1A";
-$icon-time: "\EA1B";
-$icon-treaty: "\EA1C";
-$icon-villa: "\EA1D";
-$icon-vk-copy: "\EA1E";
+$icon-fb-copy: "\EA01";
+$icon-group-9: "\EA02";
+$icon-instagram-copy-2: "\EA03";
+$icon-logo-small: "\EA04";
+$icon-menu-icon: "\EA05";
+$icon-rouble: "\EA06";
+$icon-vk-copy: "\EA07";
 
 
 %icon {
@@ -57,33 +34,10 @@ $icon-vk-copy: "\EA1E";
   display: inline-block;
 }
 
-.icon-1:before { content: $icon-1; }
-.icon-2:before { content: $icon-2; }
-.icon-24hour:before { content: $icon-24hour; }
-.icon-3:before { content: $icon-3; }
-.icon-4:before { content: $icon-4; }
-.icon-bag:before { content: $icon-bag; }
-.icon-certificate:before { content: $icon-certificate; }
-.icon-chat:before { content: $icon-chat; }
-.icon-city:before { content: $icon-city; }
-.icon-coins:before { content: $icon-coins; }
-.icon-cycle:before { content: $icon-cycle; }
 .icon-fb-copy:before { content: $icon-fb-copy; }
 .icon-group-9:before { content: $icon-group-9; }
-.icon-home:before { content: $icon-home; }
-.icon-horse:before { content: $icon-horse; }
 .icon-instagram-copy-2:before { content: $icon-instagram-copy-2; }
-.icon-letter:before { content: $icon-letter; }
-.icon-location:before { content: $icon-location; }
 .icon-logo-small:before { content: $icon-logo-small; }
-.icon-logo:before { content: $icon-logo; }
 .icon-menu-icon:before { content: $icon-menu-icon; }
-.icon-peple:before { content: $icon-peple; }
 .icon-rouble:before { content: $icon-rouble; }
-.icon-rub:before { content: $icon-rub; }
-.icon-store:before { content: $icon-store; }
-.icon-talk:before { content: $icon-talk; }
-.icon-time:before { content: $icon-time; }
-.icon-treaty:before { content: $icon-treaty; }
-.icon-villa:before { content: $icon-villa; }
 .icon-vk-copy:before { content: $icon-vk-copy; }

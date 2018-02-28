@@ -3,6 +3,25 @@ import './lib/maskedinput';
 import rangeslider from 'rangeslider.js';
 // import ScrollMagic from 'scrollmagic';
 
+//range
+// $('input[type="range"]').rangeslider({
+//   onSlide: function(position, value) {
+//     $('.coins__res').text(value);
+//   }
+// });
+
+const cssClasses = [
+  'rangeslider--is-lowest-value',
+  'rangeslider--is-highest-value'
+];
+  
+$('input[type=range]').rangeslider({
+  polyfill: false,
+  onSlide: function(position, value) {
+    $('.coins__res').text(value);
+  }
+});
+
 
 
 //калькулятор
@@ -13,16 +32,16 @@ let sum = $('.sum');
 
 coins.change(function() {
   computation();
-  $('.coins__res').text(coins.val());
+  $('.coins__res').text(coins.val() + 'P');
 });
 credit.change(function() {
   computation();
-  $('.credit__res').text(credit.val());
+  $('.credit__res').text(credit.val() + 'лет');
   console.log(+credit.val());
 });
 percent.change(function() {
   computation();
-  $('.percent__res').text(+percent.val(), '%');
+  $('.percent__res').text(+percent.val() + '%');
 });
 
 function computation() {
@@ -35,7 +54,8 @@ function computation() {
 
 //pop-up
 
-// menu
+
+//menu
 $('.icon-menu-icon').on('click', function() {
   $('.menu').addClass('active');
 });
@@ -62,9 +82,6 @@ jQuery(function($) {
   $('input[type="tel"]').mask('+7(699) 999-9999');
 });
 
-
-//range
-$('input[type="range"]').rangeslider();
 
 
 
