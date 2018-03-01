@@ -3,7 +3,16 @@ import TweenMax from 'gsap';
 import 'animation.gsap';
 import 'debug.addIndicators';
 
-//logo
+//якарь
+$('.header__block__calculator').on('click', function(event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 1500);
+});
+
+
+//logo  scrollmagic
 $(window).scroll(function() {
   var scrolled = $(this).scrollTop();
   if( scrolled >= 2 && ! $('.header').hasClass('sticked') ) {

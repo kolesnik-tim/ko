@@ -1,5 +1,7 @@
 import Parallax from 'parallax-js';
 
+
+//regulation
 var scene = $('#regulation').get(0);
 var parallaxInstance = new Parallax(scene);
 
@@ -13,9 +15,7 @@ var scene = $('#regulation4').get(0);
 var parallaxInstance = new Parallax(scene);
 
 
-
-
-
+//credit
 var scene = $('#credit').get(0);
 var parallaxInstance = new Parallax(scene);
 
@@ -29,10 +29,7 @@ var scene = $('#credit4').get(0);
 var parallaxInstance = new Parallax(scene);
 
 
-
-
-
-
+//documentation
 var scene = $('#documentation').get(0);
 var parallaxInstance = new Parallax(scene);
 
@@ -46,9 +43,7 @@ var scene = $('#documentation4').get(0);
 var parallaxInstance = new Parallax(scene);
 
 
-
-
-
+//description
 var scene = $('#description').get(0);
 var parallaxInstance = new Parallax(scene);
 

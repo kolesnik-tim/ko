@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" viewBox="0 0 24 30">
-    <g fill="none" fill-rule="evenodd">
-        <path stroke="#4C4C4C" stroke-width="2" d="M.306 27.91V1.98c0-.924.75-1.674 1.673-1.674h20.075c.924 0 1.674.75 1.674 1.673V27.91c0 .924-.75 1.673-1.674 1.673H1.98A1.673 1.673 0 0 1 .306 27.91z"/>
-        <path fill="#DBD273" d="M5.325 12.017H18.71V6.998H5.325z"/>
-        <path stroke="#4C4C4C" d="M5.325 12.017H18.71V6.998H5.325z"/>
-        <path stroke="#4C4C4C" stroke-width="2" d="M4.489 17.363h3.346M10.344 17.363h3.346M16.2 17.363h3.345M4.489 20.709h3.346M10.344 20.709h3.346M16.2 20.709h3.345M16.2 24.055h3.345M13.69 24.055h-3.346M7.834 24.055H4.488"/>
-    </g>
-</svg>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 30"><defs><style>.cls-1{fill:none;stroke-width:2px;}.cls-1,.cls-2{stroke:#4c4c4c;stroke-miterlimit:10;}.cls-2{fill:#dbd273;}</style></defs><title>calc_up</title><path class="cls-1" d="M3,27.4V2.6A1.66,1.66,0,0,1,4.71,1H25.29A1.66,1.66,0,0,1,27,2.6V27.4A1.66,1.66,0,0,1,25.29,29H4.71A1.66,1.66,0,0,1,3,27.4Z" transform="translate(-2)"/><rect class="cls-2" x="6.14" y="7.4" width="13.71" height="4.8"/><line class="cls-1" x1="5.29" y1="15.4" x2="8.71" y2="15.4"/><line class="cls-1" x1="11.29" y1="15.4" x2="14.71" y2="15.4"/><line class="cls-1" x1="17.29" y1="15.4" x2="20.71" y2="15.4"/><line class="cls-1" x1="5.29" y1="18.6" x2="8.71" y2="18.6"/><line class="cls-1" x1="11.29" y1="18.6" x2="14.71" y2="18.6"/><line class="cls-1" x1="17.29" y1="18.6" x2="20.71" y2="18.6"/><line class="cls-1" x1="17.29" y1="21.8" x2="20.71" y2="21.8"/><line class="cls-1" x1="14.71" y1="21.8" x2="11.29" y2="21.8"/><line class="cls-1" x1="8.71" y1="21.8" x2="5.29" y2="21.8"/></svg>
