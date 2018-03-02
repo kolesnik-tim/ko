@@ -5,7 +5,7 @@ section.intro
         h1 КРЕДИТ ПОД ЗАЛОГ НЕДВИЖИМОСТИ
         p Поможем в сложных ситуациях.
         p Когда все отказывают, а деньги нужны срочно!
-        form.form
+        form.form.form--intro
           .form__name
             input(type="text" name="name" id="user" required)
             label(for="user") Имя
@@ -13,11 +13,11 @@ section.intro
             input(type="tel" name="phone" id="phone" required)
             label(for="phone") Телефон
           .form__coins
-            input(type="number" name="coins" id="coins" required)
+            input(type="number" name="coins" id="coins")
             label(for="coins") Сумма
           input(type="submit" value="Отправить заявку").btn
           .form__checkbox
-            input(type="checkbox" id="checkbox")
+            input(type="checkbox" id="checkbox" checked)
             label(for="checkbox") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
               a(href="#") условия соглашения.
 .separation

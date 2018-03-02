@@ -6,17 +6,17 @@
       nav
         ul
           li
-            a(href="#") Условия
+            a(href="#conditions") Условия
           li
-            a(href="#") Кредитный калькулятор
+            a(href="#calc") Кредитный калькулятор
           li
-            a(href="#") Преимущества
+            a(href="#benefit") Преимущества
           li
-            a(href="#") О компании
+            a(href="#description--block") О компании
           li
-            a(href="#") Конткты
+            a(href="#contacts") Конткты
           li
-            a(href="#").btn Заявка на кредит
+            a(href="#support-2" data-pop).btn Заявка на кредит
 #support-1.pop-up
   .row.middle-xs
     .col-xs-12.center-xs
@@ -24,7 +24,7 @@
         span
       .heading.heading--bid-1
         h2 Заявка на кредит
-        p Кредит на <span>3 750 000</span> рублей сроком <span>18</span> лет с процентной ставкой <span>25%</span>.
+        p Кредит на <span class="sum__res1">3 750 000</span> рублей сроком <span class="term__res1">18</span><b class="term__res"><i>лет</i></b> с процентной ставкой <span class="percent__res1">13</span><i>%</i>.
       form.form.form--pop-up
         .form__name
           input(type="text" name="name" id="user1" required)
@@ -33,11 +33,11 @@
           input(type="tel" name="phone" id="phone1" required)
           label(for="phone1") Телефон
         .form__coins
-          input(type="number" name="coins" id="coins1" required)
+          input(type="number" class="sum__res--input" name="coins" id="coins1")
           label(for="coins1") Сумма
         input(type="submit" value="Отправить").btn
         .form__checkbox
-          input(type="checkbox" id="checkbox1")
+          input(type="checkbox" id="checkbox1" checked)
           label(for="checkbox1") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
             a(href="#") условия соглашения.
 #support-2.pop-up
@@ -55,11 +55,11 @@
           input(type="tel" name="phone" id="phone2" required)
           label(for="phone2") Телефон
         .form__coins
-          input(type="number" name="coins" id="coins2" required)
+          input(type="number" name="coins" id="coins2")
           label(for="coins2") Сумма
         input(type="submit" value="Отправить").btn
         .form__checkbox
-          input(type="checkbox" id="checkbox2")
+          input(type="checkbox" id="checkbox2" checked)
           label(for="checkbox2") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
             a(href="#") условия соглашения.
 #consultant.pop-up
@@ -77,7 +77,7 @@
           label(for="phone3") Телефон
         input(type="submit" value="Отправить").btn
         .form__checkbox
-          input(type="checkbox" id="checkbox3")
+          input(type="checkbox" id="checkbox3" checked)
           label(for="checkbox3") Нажимая на кнопку «Отправить», я даю своё согласие на обработку персональных данных и принимаю
             a(href="#") условия соглашения.
 

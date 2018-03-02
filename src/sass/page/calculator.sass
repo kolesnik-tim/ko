@@ -46,6 +46,7 @@
           padding-bottom: 15px
           color: $warm-grey-two
     &__pay
+      padding-bottom: 70px
       +r(767)
         margin-top: -20px
       p
@@ -54,26 +55,36 @@
         letter-spacing: 0.5px
         color: $greyish-brown
       span
-        font-family: LiteraturnayaC
+        font-family: 'Literaturnaya'
         font-size: 60px
         font-weight: bold
         letter-spacing: 1px
-        text-align: right
         color: $greyish-brown
         text-shadow: 2px 2px 0 $very-light-brown
         padding: 15px 0
         display: inline-block
+        +r(1024)
+          font-size: 40px
+        +r(767)
+          font-size: 52px
       svg
         font-size: 70px
         margin-bottom: -15px
         margin-left: 5px
+        +r(1024)
+          font-size: 57px
+        +r(767)
+          font-size: 70px
       span:last-child
-        font-family: FiraSans
+        font-family: 'Fira Sans'
         font-size: 12px
         letter-spacing: 0.7px
         text-align: left
         color: $warm-grey-two
         text-shadow: none
+        max-width: 280px
+        +r(767)
+          max-width: 100%
       input
         width: 100%
         padding: 15px 0

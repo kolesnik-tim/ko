@@ -37,10 +37,11 @@ h1, h2
 	font-family: 'Literaturnaya'
 .btn
 	padding: 15px 45px
+	padding-top: 18px
 	font-family: 'Literaturnaya'
 	font-size: 16px !important
 	font-weight: bold
-	letter-spacing: 0.9px
+	letter-spacing: 0.3px
 	color: $greyish-brown
 	border-radius: 6px
 	background-color: $sand
@@ -51,13 +52,17 @@ h1, h2
 	text-align: center
 	transition: all 0.3s
 	&:hover
-		color: $moss
-		background-color: $greyish-brown !important
+		background-color: $dull-yellow !important
+	&--calculator
+		+r(767)
+			padding: 15px 0px
+			padding-top: 18px
+			width: 100%
 .separation
 	width: 100%
 	position: relative
 	z-index: 10
-	margin-top: -50px
+	margin-top: -100px
 	img
 		width: 100%
 
@@ -80,8 +85,7 @@ h1, h2
 		line-height: 1.54
 		letter-spacing: 1px
 		color: $greyish-brown
-		padding-top: 45px
-		padding-bottom: 40px
+		padding-top: 30px
 		+r(767)
 			font-size: 20px
 			padding-bottom: 0
@@ -90,6 +94,9 @@ h1, h2
 	&--conditions
 		h2
 			padding-top: 0px
+	&--calculator
+		h2
+			padding-top: 15px
 	&--partners
 		h2
 			padding-bottom: 65px
@@ -102,6 +109,7 @@ h1, h2
 			padding-top: 0
 			color: $white-two
 			text-shadow: 2px 2px 0 #45402c
+			margin-top: -10px
 	&--application
 		h2
 			padding-bottom: 55px
@@ -114,6 +122,14 @@ h1, h2
 			font-weight: 300
 			span
 				font-weight: 500
+			i
+				font-style: normal
+				font-weight: 500
+			b
+				font-weight: 300
+				i
+					font-style: normal
+					padding-left: 5px
 .info
 	&__block
 		p
@@ -137,10 +153,12 @@ h1, h2
 		img
 			position: absolute
 			z-index: 8
+			height: 100%
 			+r(1024)
 				position: relative
 				bottom: -42px
 				width: 60%
+				height: auto
 			+r(767)
 				width: 100%
 		&--regulation
@@ -162,6 +180,7 @@ h1, h2
 			padding-bottom: 150px
 			position: relative
 			z-index: 9
+			width: 460px
 			+r(1024)
 				padding: 0 15px
 			h2
@@ -173,7 +192,7 @@ h1, h2
 				text-shadow: 2px 2px 0 #45402c
 				max-width: 440px
 				text-transform: uppercase
-				padding-bottom: 40px
+				padding-bottom: 10px
 				+r(767)
 					font-size: 24px
 			p
@@ -182,6 +201,7 @@ h1, h2
 				letter-spacing: 0.9px
 				color: $light-khaki
 				padding-bottom: 35px
+				font-weight: 300
 			&--documentation
 				h2
 					max-width: 570px
@@ -217,18 +237,27 @@ h1, h2
 			&:valid + label
 				transform: translate(-50%, 40px)
 				font-size: 15px
+				color: $warm-grey
 			&:focus + label
 				transform: translate(-50%, 40px)
 				font-size: 15px
+				color: $warm-grey
 		label
 			position: absolute
 			left: 50%
 			transform: translateX(-50%)
 			top: 10px
 			font-size: 20px
-			color: $warm-grey
+			color: $sand
 			padding: 0
 			transition: all 0.3s
+	&--intro
+		padding-top: 40px
+	&__coins
+		input:valid + label
+			transform: translateX(-50%)
+			font-size: 20px
+			color: $sand
 	&__checkbox
 		input
 			display: none

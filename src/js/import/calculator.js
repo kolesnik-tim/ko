@@ -48,10 +48,23 @@ function computation() {
   let term = parseInt($('.term').val());
   let percent = parseInt($('.percent').val()) / 12 / 100;
   let payment = $('.payment');
+  let sum_popUp = $('.sum__res1');
+  let sum_popUpInput = $('.sum__res--input');
+  let term_popUp = $('.term__res1');
+  let percent_popUp = $('.percent__res1');
 
   let a = percent * Math.pow((1+percent), term);
   let b = Math.pow((1+percent), term) - 1;
   let result = sum * (a/b);
-
+  
+  
   payment.text(accounting.formatNumber(Math.floor(result), 0, ' '));
+  sum_popUp.text(accounting.formatNumber(Math.floor(sum), 0, ' '));
+  term_popUp.text(accounting.formatNumber(Math.floor(term / 12), 0, ''));
+  percent_popUp.text(parseInt($('.percent').val()));
+  sum_popUpInput.val(sum);
+  if(sum_popUpInput.val() !== '') {
+    $(sum_popUpInput).next().css({'font-size': '15px', 'transform': 'translate(-50%, 40px)', 'color': '#797979'});
+  }
+
 }
