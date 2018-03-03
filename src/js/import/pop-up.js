@@ -18,6 +18,9 @@ $('[data-pop]').on('click', function() {
   if($('.menu-open').hasClass('active')) {
     $(href).addClass('active');
     $('.pop-up li').addClass('fadeInUp');
+  } else if($(this).attr('href') === '#support-2') {
+    $('.menu-open').addClass('active');
+    $('#support-2').addClass('active');
   } else{
     $('.pop-up').removeClass('active');
     $('.pop-up li').removeClass('fadeInUp');
@@ -25,7 +28,7 @@ $('[data-pop]').on('click', function() {
 });
 
 //якарь
-$('.header__block--menu, #menu').on('click', 'a', function(event) {
+$('.header__block--menu, .menu').on('click', 'a', function(event) {
   event.preventDefault();
   $('#menu').removeClass('active');
   $('.pop-up li').removeClass('fadeInUp');
