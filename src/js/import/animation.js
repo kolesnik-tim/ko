@@ -13,14 +13,6 @@ $('input[type=number]').blur(function() {
   }
 });
 
-//якарь
-$('.header__block--menu, #menu').on('click', 'a', function(event) {
-  event.preventDefault();
-  $('#menu').removeClass('active');
-  var id  = $(this).attr('href'),
-    top = $(id).offset().top;
-  $('body,html').animate({scrollTop: top}, 1500);
-});
 
 
 //logo  scrollmagic

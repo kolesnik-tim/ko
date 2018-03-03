@@ -22,6 +22,7 @@ html, body
 	max-width: 945px
 	position: relative
 	margin: 0 auto
+	z-index: 3
 	+r(1024)
 		padding: 0 15px
 .row
@@ -35,6 +36,62 @@ p
 	font-size: 26px
 h1, h2
 	font-family: 'Literaturnaya'
+.menu-open
+	position: fixed
+	top: 20px
+	left: 30px
+	width: 40px
+	height: 30px
+	padding-top: 15px
+	z-index: 9999
+	&:hover
+		span
+			background: $moss
+			&:before
+				background: $moss
+			&:after
+				background: $moss
+	span
+		width: 30px
+		height: 2px
+		background: $black
+		display: block
+		transition: color 0.3s
+		transition: width 0.5s ease
+		border-radius: 20%
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			width: 25px
+			height: 2px
+			background: $black
+			transition: color 0.3s
+			transition: transform 0.5s
+			top: 6px
+			border-radius: 20%
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 4px
+			width: 15px
+			height: 2px
+			background: $black
+			transition: color 0.3s
+			transition: transform 0.5s
+			border-radius: 20%
+	&.active
+		span
+			width: 0
+			&:before
+				width: 30px
+				transform: rotate(225deg)
+				top: 14px
+			&:after
+				transform: rotate(315deg)
+				width: 30px
+				bottom: 14px
 .btn
 	padding: 15px 45px
 	padding-top: 18px
