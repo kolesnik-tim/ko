@@ -20,8 +20,8 @@ html, body
 	width: 100% !important
 	height: 100%
 	max-width: 945px
-	position: relative
 	margin: 0 auto
+	position: relative
 	z-index: 3
 	+r(1024)
 		padding: 0 15px
@@ -38,7 +38,7 @@ h1, h2
 	font-family: 'Literaturnaya'
 .menu-open
 	position: fixed
-	top: 20px
+	top: 25px
 	left: 30px
 	width: 40px
 	height: 30px
@@ -121,12 +121,12 @@ h1, h2
 	width: 100%
 	position: relative
 	z-index: 10
-	margin-top: -100px
 	img
 		width: 100%
 		+r(1024)
 			width: auto
 .heading
+	padding-bottom: 80px
 	h2, h3
 		font-family: 'Literaturnaya'
 		font-size: 44px
@@ -135,7 +135,7 @@ h1, h2
 		letter-spacing: 1.8px
 		color: $greyish-brown
 		text-shadow: 2px 2px 0 $very-light-brown
-		padding-top: 45px
+		padding-top: 110px
 		text-transform: uppercase
 		+r(767)
 			font-size: 26px
@@ -153,26 +153,21 @@ h1, h2
 			font-weight: bold
 	&--conditions
 		h2
-			padding-top: 0px
+			padding-top: 65px
 	&--calculator
-		h2
-			padding-top: 15px
+		padding-bottom: 120px
 	&--partners
 		h2
-			padding-bottom: 65px
-			padding-top: 0px
+			padding-top: 80px
 	&--description
 		h2
 			color: $white-two
+			padding-top: 130px
 			text-shadow: 2px 2px 0 #45402c
 		h3
 			padding-top: 0
 			color: $white-two
 			text-shadow: 2px 2px 0 #45402c
-			margin-top: -10px
-	&--application
-		h2
-			padding-bottom: 55px
 	&--bid-1
 		p
 			padding-top: 0
@@ -192,6 +187,7 @@ h1, h2
 					padding-left: 5px
 .info
 	&__block
+		padding-bottom: 70px
 		p
 			padding-top: 15px
 			font-size: 22px
@@ -202,7 +198,7 @@ h1, h2
 				font-size: 16px
 				line-height: 1.25
 				color: $warm-grey
-				padding-top: 0
+				padding-top: 7px
 		img
 			width: 95px
 .advantages
@@ -216,8 +212,8 @@ h1, h2
 			height: 100%
 			+r(1024)
 				position: relative
-				bottom: -42px
-				width: 60%
+				width: 70%
+				bottom: -4px
 				height: auto
 			+r(767)
 				width: 100%
@@ -228,21 +224,23 @@ h1, h2
 		&--credit
 			img
 				left: -60%
-				bottom: -19px
+				bottom: 0px
 				+r(1024)
 					left: 0px
-					bottom: -60px
 				+r(767)
 					width: 100%
 					left: -80px
 		&__text
-			padding-top: 110px
-			padding-bottom: 150px
+			padding-top: 150px
+			padding-bottom: 190px
 			position: relative
 			z-index: 9
 			max-width: 460px
 			+r(1024)
-				padding: 0 15px
+				padding: 70px 65px
+				max-width: 600px
+			+r(600)
+				padding: 60px 15px
 			h2
 				font-size: 44px
 				font-weight: bold
@@ -252,7 +250,7 @@ h1, h2
 				text-shadow: 2px 2px 0 #45402c
 				max-width: 440px
 				text-transform: uppercase
-				padding-bottom: 10px
+				padding-bottom: 40px
 				+r(767)
 					font-size: 24px
 			p
@@ -267,11 +265,11 @@ h1, h2
 					max-width: 570px
 				p
 					padding-bottom: 0
-					line-height: 8px
+					line-height: 1.25
 					&:nth-child(6)
 						padding-bottom: 45px
 					&:nth-child(2)
-						line-height: 1.25
+						padding-bottom: 10px
 .form
 	display: block
 	&__name, &__tel, &__coins
@@ -311,6 +309,8 @@ h1, h2
 			color: $sand
 			padding: 0
 			transition: all 0.3s
+	&--step
+		padding-bottom: 60px
 	&--intro
 		padding-top: 40px
 	&__coins
@@ -401,6 +401,7 @@ h1, h2
 			+r(1024)
 				width: 265px
 		.form__checkbox
+			padding-top: 30px
 			label
 				width: 265px
 				padding-left: 25px

@@ -31,5 +31,5 @@ var controller = new ScrollMagic.Controller();
 new ScrollMagic.Scene ({
   duration: 150
 })
-  .setTween(TweenMax.to('#box', 1, { top: '5px', width: '65px', height: '60' }))
+  .setTween(TweenMax.to('#box', 1, { top: '8px', width: '65px', height: '60' }))
   .addTo(controller);
