@@ -51,6 +51,7 @@ function computation() {
   let sum_popUp = $('.sum__res1');
   let sum_popUpInput = $('.sum__res--input');
   let term_popUp = $('.term__res1');
+  let percent_popUp = $('.percent__res1');
 
   let a = percent * Math.pow((1+percent), term);
   let b = Math.pow((1+percent), term) - 1;
@@ -61,4 +62,12 @@ function computation() {
   sum_popUp.text(accounting.formatNumber(Math.floor(sum), 0, ' '));
   term_popUp.text(accounting.formatNumber(Math.floor(term / 12), 0, ''));
   percent_popUp.text(parseInt($('.percent').val()));
+
+  if (term < 11) {
+    term_popUp.text(term);
+  } else {
+    term_popUp.text(accounting.formatNumber(Math.floor(term / 12), 0, ''));
+  }
 }
+
+

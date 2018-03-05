@@ -1,0 +1,31 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 246 337">
+    <defs>
+        <style>
+            .cls-1{filter:url(#filter-4)}.cls-2{fill:#deffaa;opacity:.29}.cls-3,.cls-4{fill:#fff;opacity:.21}.cls-4{fill:#f3fcff}.cls-5{fill:#faf4d6;opacity:.53}
+        </style>
+        <filter id="filter-4" x="-19.3" y="-19.3" width="138.6" height="138.6">
+            <feGaussianBlur stdDeviation="3.99" in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <title>
+        Leak02
+    </title>
+    <g id="Symbols">
+        <g id="Leak02">
+            <g id="_02" data-name="2">
+                <g class="cls-1">
+                    <circle class="cls-2" cx="132.5" cy="235.5" r="91.5"/>
+                </g>
+                <g class="cls-1">
+                    <circle class="cls-3" cx="144.5" cy="101.5" r="91.5"/>
+                </g>
+                <g class="cls-1">
+                    <circle class="cls-4" cx="83.5" cy="190.5" r="60.5"/>
+                </g>
+                <g class="cls-1">
+                    <circle class="cls-5" cx="41" cy="224" r="31"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
